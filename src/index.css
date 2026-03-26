@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", serif;
+
+  --color-dysko-dark: #0A1F1C;
+  --color-dysko-light: #F5F5F0;
+  --color-dysko-accent: #5EB38E;
+  --color-dysko-ink: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-dysko-light text-dysko-ink font-sans antialiased;
+  }
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-dysko-accent to-white;
+}
